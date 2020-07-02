@@ -100,7 +100,11 @@ writes them out to a file (filepath in env variable LIKWID_FILEPATH).
 extern void likwid_markerClose(void) __attribute__ ((visibility ("default") ));
 /*! \brief Register a measurement region
 
-Initializes the hashTable entry in order to reduce execution time of likwid_markerStartRegion()
+Initializes the hashTable entry in order to reduce execution time of
+likwid_markerStartRegion(). Optional but highly recommended. If this is not
+run, likwid_markerStartRegion() will register the region. If regions are not
+registered but the access daemon is used, short regions will report lower
+values for the first region. 
 @param regionTag [in] Initialize data using this string
 @return Error code
 */
