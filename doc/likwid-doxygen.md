@@ -16,7 +16,7 @@ LIKWID follows the philosophy:
 \section Tools LIKWID Tools
 - \ref likwid-topology : A tool to display the thread and cache topology on multicore/multisocket computers.
 - \ref likwid-pin : A tool to pin your threaded application without changing your code. Works for pthreads and OpenMP.
-- \ref likwid-perfctr : A tool to measure hardware performance counters on x86, ARM and POWER processors as well as Nvidia GPUs. It can be used as wrapper application without modifying the profiled code or with a marker API to measure only parts of the code.
+- \ref likwid-perfctr : A tool to measure hardware performance counters on x86, ARM and POWER processors as well as Nvidia GPUs. It can be used as wrapper application without modifying the profiled code or with a \ref MarkerAPI to measure only parts of the code. For lower-level performance monitoring, a \ref PerfMon is also available. \ref Examples are available for each of these API usages.
 - \ref likwid-powermeter : A tool for accessing RAPL counters and query Turbo mode steps on Intel processor. RAPL counters are also available in \ref likwid-perfctr.
 - \ref likwid-setFrequencies : A tool to print and manage the clock frequency of CPU cores and the Uncore (Intel only).
 - \ref likwid-memsweeper : A tool to cleanup ccNUMA domains and LLC caches to get a clean environment for benchmarks.
@@ -128,6 +128,7 @@ Using the Likwid API:
 
 Using the Marker API:
 - \ref C-markerAPI-code
+- \ref C-internalMarkerAPI-code
 - \ref F-markerAPI-code
 
 Using the NvMarker API (for Nvidia GPUs):
@@ -262,14 +263,18 @@ In order to create the HTML documentation of LIKWID, the tool <A HREF="www.doxyg
 \include C-markerAPI.c
 */
 
+/*! \page C-internalMarkerAPI-code Internal Marker API in a C/C++ application: avoids likwid-perfctr wrapper tool
+\include C-markerAPI.c
+*/
+
 /*! \page F-markerAPI-code Marker API in a Fortran90 application
 \include F-markerAPI.F90
 */
 
-/*! \page C-likwidAPI-code LIKWID API in a C/C++ application
+/*! \page C-likwidAPI-code LIKWID API (performance monitoring) in a C/C++ application
 \include C-likwidAPI.c
 */
-/*! \page Lua-likwidAPI-code LIKWID API in a Lua application
+/*! \page Lua-likwidAPI-code LIKWID API (performance monitoring) in a Lua application
 \include Lua-likwidAPI.lua
 */
 
