@@ -57,7 +57,7 @@ Shortcut for likwid_markerStopRegion() with \a regionTag if compiled with -DLIKW
 */
 /*!
 \def LIKWID_MARKER_GET(regionTag, nevents, events, time, count)
-Shortcut for likwid_markerGetResults() for \a regionTag if compiled with -DLIKWID_PERFMON. Otherwise no operation is performed
+Shortcut for likwid_markerGetRegion() for \a regionTag if compiled with -DLIKWID_PERFMON. Otherwise no operation is performed
 */
 /*!
 \def LIKWID_MARKER_SWITCH
